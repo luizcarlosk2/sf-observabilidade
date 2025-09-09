@@ -7,13 +7,14 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 
+
 st.set_page_config(page_title="Exames Consolidados", layout="wide")
 
 st.title("📈 SF - Dashboard")
 
 # --- Config ---
-DEFAULT_CSV_PATH = os.environ.get("CSV_PATH", "/app/data/exames_consolidados.csv")
-REF_CSV_PATH = os.environ.get("REF_CSV_PATH", "/app/data/valores_referencia_lab.csv")
+DEFAULT_CSV_PATH = os.environ.get("CSV_PATH", "app/data/exames_consolidados.csv")
+REF_CSV_PATH = os.environ.get("REF_CSV_PATH", "app/data/valores_referencia_lab.csv")
 
 # --- Load main data ---
 @st.cache_data(show_spinner=True)
