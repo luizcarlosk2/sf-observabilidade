@@ -1,3 +1,7 @@
+# app
+/data/pdf/
+/app/data/pdf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

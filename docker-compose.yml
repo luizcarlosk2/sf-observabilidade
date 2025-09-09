@@ -1,0 +1,12 @@
+
+services:
+  exames-dashboard:
+    build: .
+    container_name: exames-dashboard-v2
+    ports:
+      - "8501:8501"
+    environment:
+      - CSV_PATH=/data/exames_consolidados.csv
+    volumes:
+      - ./data:/data:ro
+    restart: unless-stopped
